@@ -36,7 +36,7 @@ sensor:
     round: 3
 
 modbus:
-  - name: "Sprsun PC"
+  - name: "Sprsun HP"
     delay: 5
     timeout: 5
     type: tcp
