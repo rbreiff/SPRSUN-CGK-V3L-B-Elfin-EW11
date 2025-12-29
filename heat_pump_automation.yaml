@@ -34,7 +34,7 @@ automation:
         data_template:
           address: 414
           slave: 1
-          hub: Sprsun PC
+          hub: Sprsun HP
           value: '{{ trigger.to_state.state[0] | int(0)  }}'
 - id: sprsun_pc_wybieramy_tryb_pracy_kompresora_190
   alias: Heat pump - Fan mode
@@ -69,7 +69,7 @@ automation:
         data_template:
           address: 400
           slave: 1
-          hub: Sprsun PC
+          hub: Sprsun HP
           value: '{{ trigger.to_state.state[0] | int(0)  }}'
 
 - id: sprsun_pc_wybieramy_tryb_pracy_p06_unit_mode_36
@@ -106,7 +106,7 @@ automation:
         data_template:
           address: 54
           slave: 1
-          hub: Sprsun PC
+          hub: Sprsun HP
           value: '{{ trigger.to_state.state[0] | int(0)  }}'
 
 - id: sprsun_pc_nastawiony_czas_po_g03_start_internal_185
@@ -118,7 +118,7 @@ automation:
     service: modbus.write_register
     data_template:
       address: 389
-      hub: Sprsun PC
+      hub: Sprsun HP
       unit: 1
       value: '{{ ((states(''input_number.sprsun_pc_nastawiony_czas_po_g03_start_internal_185'')
         | float) | multiply(1) | int) }}'
@@ -132,7 +132,7 @@ automation:
     service: modbus.write_register
     data_template:
       address: 56
-      hub: Sprsun PC
+      hub: Sprsun HP
       unit: 1
       value: '{{ ((states(''input_number.sprsun_pc_nastawiony_czas_h08_defros_period_1_0038'')
         | float) | multiply(1) | int) }}'
@@ -146,7 +146,7 @@ automation:
     service: modbus.write_register
     data_template:
       address: 57
-      hub: Sprsun PC
+      hub: Sprsun HP
       unit: 1
       value: '{{ ((states(''input_number.sprsun_pc_nastawiony_czas_h11_defros_period_2_0039'')
         | float) | multiply(1) | int) }}'
@@ -160,7 +160,7 @@ automation:
     service: modbus.write_register
     data_template:
       address: 58
-      hub: Sprsun PC
+      hub: Sprsun HP
       unit: 1
       value: '{{ ((states(''input_number.sprsun_pc_nastawiony_czas_h14_defros_period_3_003a'')
         | float) | multiply(1) | int) }}'
@@ -174,7 +174,7 @@ automation:
     service: modbus.write_register
     data_template:
       address: 252
-      hub: Sprsun PC
+      hub: Sprsun HP
       unit: 1
       value: '{{ ((states(''input_number.sprsun_pc_nastawiona_freq_of_water_r00'')
         | float) | multiply(1) | int) }}'
@@ -188,7 +188,7 @@ automation:
     service: modbus.write_register
     data_template:
       address: 260
-      hub: Sprsun PC
+      hub: Sprsun HP
       unit: 1
       value: '{{ ((states(''input_number.sprsun_pc_nastawiona_freq_of_heat_r04'')
         | float) | multiply(1) | int) }}'
@@ -202,7 +202,7 @@ automation:
     service: modbus.write_register
     data_template:
       address: 253
-      hub: Sprsun PC
+      hub: Sprsun HP
       unit: 1
       value: '{{ ((states(''input_number.sprsun_pc_nastawiona_freq_of_water_r01'')
         | float) | multiply(1) | int) }}'
@@ -216,7 +216,7 @@ automation:
     service: modbus.write_register
     data_template:
       address: 261
-      hub: Sprsun PC
+      hub: Sprsun HP
       unit: 1
       value: '{{ ((states(''input_number.sprsun_pc_nastawiona_freq_of_heat_r05'')
         | float) | multiply(1) | int) }}'
@@ -230,9 +230,10 @@ automation:
     service: modbus.write_register
     data_template:
       address: 394
-      hub: Sprsun PC
+      hub: Sprsun HP
       unit: 1
       value: '{{ ((states(''input_number.sprsun_pc_nastawiona_min_freq_dc_pump'')
         | float) | multiply(1) | int) }}'
+
 
 
